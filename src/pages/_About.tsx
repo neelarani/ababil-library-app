@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <main className="container mx-auto px-4 py-12 max-w-4xl">
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          About <span className="text-primary">Neela Wallet</span>
+          About <span className="text-primary">Ababil Wallet</span>
         </h1>
         <p className="text-muted-foreground text-lg">
-          Neela Wallet is your trusted digital wallet app that makes sending,
+          Ababil Wallet is your trusted digital wallet app that makes sending,
           receiving, and managing money simple and secure. Built with modern
           design and seamless user experience, it’s the perfect wallet for your
           everyday financial needs.
@@ -33,7 +33,7 @@ const About = () => {
         <div className="p-6 rounded-lg border bg-card shadow-sm">
           <h2 className="text-xl font-semibold mb-2">🌍 Global Access</h2>
           <p className="text-muted-foreground">
-            Use Neela Wallet anytime, anywhere — perfect for travelers, online
+            Use Ababil Wallet anytime, anywhere — perfect for travelers, online
             payments, and cross-border transfers.
           </p>
         </div>
@@ -47,7 +47,9 @@ const About = () => {
       </section>
 
       <section className="text-center mt-16">
-        <h2 className="text-2xl font-semibold mb-4">Join Neela Wallet Today</h2>
+        <h2 className="text-2xl font-semibold mb-4">
+          Join Ababil Wallet Today
+        </h2>
         <p className="text-muted-foreground mb-6">
           Experience the freedom of a fast, secure, and modern digital wallet.
         </p>

@@ -1,14 +1,17 @@
-# 💳 Neela Wallet App (Frontend)
+# 💳 Ababil Wallet App (Frontend)
 
-The **Neela Wallet App frontend** is a modern digital wallet interface built with **React, Redux Toolkit, TypeScript, Tailwind CSS, and Axios**.
-It connects to the [Neela Wallet API](https://neela-wallet-api.vercel.app/) and provides role-based dashboards for **Users, Agents, and Admins**.
+The **Ababil Wallet App frontend** is a modern digital wallet interface built
+with **React, Redux Toolkit, TypeScript, Tailwind CSS, and Axios**. It connects
+to the [Ababil Wallet API](https://Ababil-wallet-api.vercel.app/) and provides
+role-based dashboards for **Users, Agents, and Admins**.
 
-[LIVE LINK -> https://neela-wallet-app.vercel.app](https://neela-wallet-app.vercel.app)
+[LIVE LINK -> https://Ababil-wallet-app.vercel.app](https://Ababil-wallet-app.vercel.app)
 
 ## 🚀 Tech Stack
 
 - ⚛️ [React](https://react.dev/) – Component-based UI
-- 🛠 [Redux Toolkit](https://redux-toolkit.js.org/) + RTK Query – State management & API handling
+- 🛠 [Redux Toolkit](https://redux-toolkit.js.org/) + RTK Query – State
+  management & API handling
 - ⌨️ [TypeScript](https://www.typescriptlang.org/) – Type safety
 - 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utility-first styling
 - 🌐 [Axios](https://axios-http.com/) – HTTP requests
@@ -48,8 +51,8 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://gitlab.com/DevAbabil/neela-wallet-app.git
-cd neela-wallet-app
+git clone https://gitlab.com/DevAbabil/Ababil-wallet-app.git
+cd Ababil-wallet-app
 ```
 
 ### 2. Install dependencies
@@ -67,7 +70,7 @@ yarn install
 Create a `.env` file in the root:
 
 ```bash
-VITE_API_URL=https://neela-wallet-api.vercel.app/api/v1
+VITE_API_URL=https://Ababil-wallet-api.vercel.app/api/v1
 ```
 
 ### 4. Run development server
@@ -117,5 +120,6 @@ MIT License © 2025 [DevAbabil](https://gitlab.com/DevAbabil)
 
 ## ❤️ Made with Love
 
-This `assignment` was built with dedication and care for `Neela`, my inspiration and heartbeat 💙.
-Every line of code carries her name, her smile, and her support.
+This `assignment` was built with dedication and care for `Ababil`, my
+inspiration and heartbeat 💙. Every line of code carries her name, her smile,
+and her support.

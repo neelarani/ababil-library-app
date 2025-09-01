@@ -1,5 +1,5 @@
-import { authApi, useAppDispatch, userApi } from "@/redux";
-import { getSidebarItemsWithRole } from "@/utils";
+import { authApi, useAppDispatch, userApi } from '@/redux';
+import { getSidebarItemsWithRole } from '@/utils';
 import {
   Sidebar,
   SidebarContent,
@@ -11,10 +11,10 @@ import {
   SidebarMenuItem,
   SidebarRail,
   SidebarFooter,
-} from "@/components/ui/sidebar";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Logo } from "@/components";
-import { cn } from "@/lib";
+} from '@/components/ui/sidebar';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Logo } from '@/components';
+import { cn } from '@/lib';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -25,9 +25,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
+} from '@/components/ui/alert-dialog';
+import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
 
 const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
   const dispatch = useAppDispatch();
@@ -43,10 +43,10 @@ const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
     const { error } = await logout(undefined);
     if (!error) {
       dispatch(authApi.util.resetApiState());
-      navigate("/login");
-      toast.success("Logout Successful");
+      navigate('/login');
+      toast.success('Logout Successful');
     } else {
-      toast.error("Failed to Logout");
+      toast.error('Failed to Logout');
     }
   };
 
@@ -59,21 +59,21 @@ const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
       </SidebarHeader>
 
       <SidebarContent>
-        {items.map((group) => (
+        {items.map(group => (
           <SidebarGroup key={group.title}>
             <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {group.items.map((item) => (
+                {group.items.map(item => (
                   <SidebarMenuItem key={item.title}>
                     <NavLink
                       to={item.url}
                       className={({ isActive }) =>
                         cn(
-                          "block px-4 py-2 rounded font-semibold",
+                          'block px-4 py-2 rounded font-semibold',
                           isActive
-                            ? "text-primary bg-primary/10"
-                            : "text-primary/80 hover:text-primary hover:bg-primary/5"
+                            ? 'text-primary bg-primary/10'
+                            : 'text-foreground hover:text-primary hover:bg-primary/5'
                         )
                       }
                     >
@@ -90,9 +90,7 @@ const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
       <SidebarFooter className="px-4 pb-4">
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button variant="destructive" className="w-full">
-              Logout
-            </Button>
+            <Button className="w-full bg-primary">Logout</Button>
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>

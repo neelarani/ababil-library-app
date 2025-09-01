@@ -3,33 +3,33 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
 
 const faqs = [
   {
-    question: "What is Neela Wallet?",
+    question: 'What is Ababil Wallet?',
     answer:
-      "Neela Wallet is a secure digital wallet that lets you store, send, and receive money instantly with advanced encryption and multi-currency support.",
+      'Ababil Wallet is a secure digital wallet that lets you store, send, and receive money instantly with advanced encryption and multi-currency support.',
   },
   {
-    question: "Is my money safe with Neela Wallet?",
+    question: 'Is my money safe with Ababil Wallet?',
     answer:
-      "Yes! We use bank-level encryption, fraud detection systems, and multi-factor authentication to keep your funds and data safe at all times.",
+      'Yes! We use bank-level encryption, fraud detection systems, and multi-factor authentication to keep your funds and data safe at all times.',
   },
   {
-    question: "How do I add money to my wallet?",
+    question: 'How do I add money to my wallet?',
     answer:
-      "You can add money using your debit/credit card, bank transfer, or linked payment accounts directly within the Neela Wallet app.",
+      'You can add money using your debit/credit card, bank transfer, or linked payment accounts directly within the Ababil Wallet app.',
   },
   {
-    question: "Can I use Neela Wallet internationally?",
+    question: 'Can I use Ababil Wallet internationally?',
     answer:
-      "Absolutely! Neela Wallet supports multiple currencies and allows cross-border payments at competitive rates.",
+      'Absolutely! Ababil Wallet supports multiple currencies and allows cross-border payments at competitive rates.',
   },
   {
-    question: "Are there any hidden fees?",
+    question: 'Are there any hidden fees?',
     answer:
-      "No hidden charges. All fees (if applicable) are shown transparently before you make any transaction.",
+      'No hidden charges. All fees (if applicable) are shown transparently before you make any transaction.',
   },
 ];
 
@@ -41,7 +41,7 @@ const FAQ = () => {
           Frequently Asked <span className="text-primary">Questions</span>
         </h2>
         <p className="text-center text-muted-foreground mb-8">
-          Everything you need to know about Neela Wallet, in one place.
+          Everything you need to know about Ababil Wallet, in one place.
         </p>
 
         <Accordion type="single" collapsible className="w-full space-y-2">

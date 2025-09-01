@@ -1,5 +1,5 @@
-import { userApi } from "@/redux";
-import { Link } from "react-router-dom";
+import { userApi } from '@/redux';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const { data, isLoading } = userApi.useUserInfoQuery();
@@ -17,7 +17,7 @@ const Home = () => {
     <main className="container mx-auto px-4 py-12 max-w-6xl">
       <section className="text-center py-16">
         <h1 className="text-5xl font-extrabold tracking-tight text-foreground mb-6">
-          Welcome to <span className="text-primary">Neela Wallet</span>
+          Welcome to <span className="text-primary">Ababil Wallet</span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
           The smart and secure way to manage your money. Send, receive, and
@@ -66,7 +66,9 @@ const Home = () => {
       </section>
 
       <section className="mt-24 text-center">
-        <h2 className="text-3xl font-semibold mb-10">How Neela Wallet Works</h2>
+        <h2 className="text-3xl font-semibold mb-10">
+          How Ababil Wallet Works
+        </h2>
         <div className="grid gap-8 md:grid-cols-3">
           <div className="p-6 rounded-lg border bg-card shadow-sm">
             <h3 className="text-xl font-bold mb-2">1. Sign Up</h3>
@@ -95,7 +97,7 @@ const Home = () => {
             Ready to simplify your finances?
           </h2>
           <p className="text-muted-foreground mb-6">
-            Join thousands of users who trust Neela Wallet to manage their
+            Join thousands of users who trust Ababil Wallet to manage their
             money.
           </p>
           <Link

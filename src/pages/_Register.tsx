@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -6,39 +6,39 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Link } from "react-router-dom";
-import { useId, useState } from "react";
-import { EyeIcon, EyeOffIcon } from "lucide-react";
-import { userApi } from "@/redux";
-import { toast } from "sonner";
-import { getErrorMessage } from "@/utils";
-import { Card, CardContent } from "@/components/ui/card";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { Link } from 'react-router-dom';
+import { useId, useState } from 'react';
+import { EyeIcon, EyeOffIcon } from 'lucide-react';
+import { userApi } from '@/redux';
+import { toast } from 'sonner';
+import { getErrorMessage } from '@/utils';
+import { Card, CardContent } from '@/components/ui/card';
 
 export const CreateUserSchema = z.object({
   name: z
     .string()
-    .min(2, "Name must be at least 2 characters")
-    .refine((val) => val.trim() !== "", { message: "Name is required" }),
+    .min(2, 'Name must be at least 2 characters')
+    .refine(val => val.trim() !== '', { message: 'Name is required' }),
   email: z
     .string()
-    .email("Invalid email format")
-    .refine((val) => val.trim() !== "", { message: "Email is required" }),
+    .email('Invalid email format')
+    .refine(val => val.trim() !== '', { message: 'Email is required' }),
   phone: z
     .string()
-    .min(10, "Phone must be at least 10 digits")
-    .refine((val) => val.trim() !== "", { message: "Phone is required" }),
+    .min(10, 'Phone must be at least 10 digits')
+    .refine(val => val.trim() !== '', { message: 'Phone is required' }),
   password: z
     .string()
     .regex(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/,
       {
         message:
-          "Password must be at least 8 characters and include 1 uppercase, 1 lowercase, 1 number, and 1 special character",
+          'Password must be at least 8 characters and include 1 uppercase, 1 lowercase, 1 number, and 1 special character',
       }
     ),
 });
@@ -52,20 +52,20 @@ const Register = () => {
 
   const form = useForm<RegisterSchema>({
     resolver: zodResolver(CreateUserSchema),
-    defaultValues: { name: "", email: "", phone: "", password: "" },
+    defaultValues: { name: '', email: '', phone: '', password: '' },
   });
 
   const onSubmit = async (inputData: RegisterSchema) => {
     try {
       const { message } = await registerUser(inputData).unwrap();
-      toast.success(message || "Registration successful!");
+      toast.success(message || 'Registration successful!');
     } catch (error: unknown) {
-      toast.error(getErrorMessage(error) || "Registration failed!");
+      toast.error(getErrorMessage(error) || 'Registration failed!');
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br px-4 py-20">
       <Card className="w-full max-w-md shadow-lg border rounded-2xl">
         <CardContent className="p-8">
           <h2 className="mb-6 text-center text-2xl font-bold text-foreground">
@@ -133,15 +133,15 @@ const Register = () => {
                           className="pe-9"
                           placeholder="Password"
                           autoComplete="off"
-                          type={isVisible ? "text" : "password"}
+                          type={isVisible ? 'text' : 'password'}
                           {...field}
                         />
                         <button
                           type="button"
                           className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center text-muted-foreground hover:text-foreground transition"
-                          onClick={() => setIsVisible((prev) => !prev)}
+                          onClick={() => setIsVisible(prev => !prev)}
                           aria-label={
-                            isVisible ? "Hide password" : "Show password"
+                            isVisible ? 'Hide password' : 'Show password'
                           }
                         >
                           {isVisible ? (
@@ -164,7 +164,7 @@ const Register = () => {
           </Form>
 
           <p className="mt-6 text-center text-sm text-muted-foreground">
-            Already have an account?{" "}
+            Already have an account?{' '}
             <Link
               to="/login"
               className="font-medium text-primary hover:underline"
