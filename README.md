@@ -2,10 +2,10 @@
 
 The **Ababil Wallet App frontend** is a modern digital wallet interface built
 with **React, Redux Toolkit, TypeScript, Tailwind CSS, and Axios**. It connects
-to the [Ababil Wallet API](https://Ababil-wallet-api.vercel.app/) and provides
+to the [Ababil Wallet API](https://ababil-wallet-app.vercel.app/) and provides
 role-based dashboards for **Users, Agents, and Admins**.
 
-[LIVE LINK -> https://Ababil-wallet-app.vercel.app](https://Ababil-wallet-app.vercel.app)
+[LIVE LINK -> https://ababil-wallet-app.vercel.app/](https://ababil-wallet-app.vercel.app/)
 
 ## 🚀 Tech Stack
 
@@ -51,7 +51,7 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://gitlab.com/DevAbabil/Ababil-wallet-app.git
+git clone https://github.com/neelarani/ababil-library-app
 cd Ababil-wallet-app
 ```
 
@@ -70,7 +70,7 @@ yarn install
 Create a `.env` file in the root:
 
 ```bash
-VITE_API_URL=https://Ababil-wallet-api.vercel.app/api/v1
+VITE_API_URL= https://ababil-wallet-api.vercel.app/api/v1
 ```
 
 ### 4. Run development server
@@ -116,10 +116,6 @@ npm run lint      # Run ESLint
 
 ## 📜 License
 
-MIT License © 2025 [DevAbabil](https://gitlab.com/DevAbabil)
+MIT License © 2025 [neelarani](https://github.com/neelarani)
 
-## ❤️ Made with Love
-
-This `assignment` was built with dedication and care for `Ababil`, my
-inspiration and heartbeat 💙. Every line of code carries her name, her smile,
-and her support.
+#### ❤️ Made with Love

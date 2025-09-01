@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -7,29 +7,30 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Link, useNavigate } from "react-router-dom";
-import { useId, useState } from "react";
-import { EyeIcon, EyeOffIcon } from "lucide-react";
-import { authApi } from "@/redux";
-import { toast } from "sonner";
-import { ENV } from "@/config";
-import { getErrorMessage } from "@/utils";
-import { Card, CardContent } from "@/components/ui/card";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { Link, useNavigate } from 'react-router-dom';
+import { useId, useState } from 'react';
+import { EyeIcon, EyeOffIcon } from 'lucide-react';
+import { authApi } from '@/redux';
+import { toast } from 'sonner';
+import { ENV } from '@/config';
+import { getErrorMessage } from '@/utils';
+import { Card, CardContent } from '@/components/ui/card';
+import { LoginCredential } from '@/components';
 
 const loginSchema = z.object({
-  email: z.string().email({ message: "Please enter a valid email address." }),
+  email: z.string().email({ message: 'Please enter a valid email address.' }),
   password: z
     .string()
     .regex(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/,
       {
         message:
-          "Password must be at least 8 characters and include 1 uppercase, 1 lowercase, 1 number, and 1 special character",
+          'Password must be at least 8 characters and include 1 uppercase, 1 lowercase, 1 number, and 1 special character',
       }
     ),
 });
@@ -45,21 +46,21 @@ const Login = () => {
   const form = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     },
   });
 
   const onSubmit = async (inputData: LoginSchema) => {
     try {
       const { message } = await login(inputData).unwrap();
-      toast.success(message || "Login Successful!", {
+      toast.success(message || 'Login Successful!', {
         richColors: true,
         closeButton: true,
       });
-      navigate("/");
+      navigate('/');
     } catch (error: unknown) {
-      toast.error(getErrorMessage(error) || "Something went wrong.");
+      toast.error(getErrorMessage(error) || 'Something went wrong.');
     }
   };
 
@@ -70,7 +71,12 @@ const Login = () => {
           <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-foreground">
             Login to your account 🔐
           </h2>
-
+          <LoginCredential
+            setCredentials={data => {
+              form.setValue('email', data.email);
+              form.setValue('password', data.password);
+            }}
+          />
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
@@ -107,15 +113,15 @@ const Login = () => {
                           className="pe-9"
                           placeholder="Password"
                           autoComplete="off"
-                          type={isVisible ? "text" : "password"}
+                          type={isVisible ? 'text' : 'password'}
                           {...field}
                         />
                         <button
                           className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center text-muted-foreground hover:text-foreground transition"
                           type="button"
-                          onClick={() => setIsVisible((prev) => !prev)}
+                          onClick={() => setIsVisible(prev => !prev)}
                           aria-label={
-                            isVisible ? "Hide password" : "Show password"
+                            isVisible ? 'Hide password' : 'Show password'
                           }
                           aria-pressed={isVisible}
                           aria-controls="password"
@@ -155,7 +161,7 @@ const Login = () => {
           </Form>
 
           <p className="mt-6 text-center text-sm text-muted-foreground">
-            Don’t have an account?{" "}
+            Don’t have an account?{' '}
             <Link
               to="/register"
               className="font-medium text-primary hover:underline"

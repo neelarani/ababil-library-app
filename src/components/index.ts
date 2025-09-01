@@ -16,12 +16,13 @@
  */
 
 /* Global Component */
-export { default as Logo } from "./global/Logo";
-export { default as NavMenu } from "./global/NavMenu";
-export { default as Header } from "./global/Header";
-export { default as Footer } from "./global/Footer";
-export { default as Logout } from "./global/Logout";
-export { default as ModeToggle } from "./global/ModeToggle";
+export { default as Logo } from './global/Logo';
+export { default as NavMenu } from './global/NavMenu';
+export { default as Header } from './global/Header';
+export { default as Footer } from './global/Footer';
+export { default as Logout } from './global/Logout';
+export { default as ModeToggle } from './global/ModeToggle';
+export { default as LoginCredential } from './global/LoginCredential';
 
 /* Dashboard Component */
-export * from "./dashboard";
+export * from './dashboard';
